@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC</title>
+</head>
+<body>
+    <h1>Saikoushik - Web Developer</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    let f = 1
+    function Repeat()
+    {
+        console.log('Saikoushik', Date.now())
+    }
+    document.querySelector('#start').addEventListener("click",()=>{
+        f = setInterval(Repeat,1000)
+    })
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(f)
+    })
+</script>
+</html>
